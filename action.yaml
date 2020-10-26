@@ -1,0 +1,27 @@
+name: Get Cloudify Environment Data
+author: Isaac Shabtay
+description: Retrieves a Cloudify environment's data, into a file and/or an output
+branding:
+  icon: cloud
+  color: white
+inputs:
+  environment-name:
+    description: Name of Cloudify environment to inquire
+    required: true
+  outputs-file:
+    description: |
+      Path to JSON file to receive the Cloudify environment's outputs
+      and capabilities
+    required: false
+    default: "-"
+outputs:
+  environment-data:
+    description: The Cloudify environment's outputs and capabilties
+runs:
+  using: docker
+  image: docker://cloudifyplatform/cloudify-cli:5.0.5.1
+  entrypoint: cfyci
+  args:
+    - get-environment-data
+    - '--name'
+    - ${{ inputs.environment-name }}
