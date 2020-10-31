@@ -9,7 +9,11 @@ Cloudify documentation (see [More Information](#more-information) below).
 
 (Certain commonly-used inputs are documented in our official website; see [More Information](#more-information) below)
 
-The environment's data is written into an output (`environment-data`).
+# Outputs
+
+| Name | Description
+|------|------------
+| `environment-data` | The environment's data, as described in the official Cloudify documentation (see below)
 
 If `outputs-file` is specified, then the environment's data is also written into that file.
 
