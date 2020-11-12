@@ -25,3 +25,5 @@ runs:
     - get-environment-data
     - '--name'
     - ${{ inputs.environment-name }}
+    - '--outputs-file'
+    - ${{ inputs.outputs-file }}
