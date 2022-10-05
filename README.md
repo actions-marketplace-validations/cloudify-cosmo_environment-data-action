@@ -24,7 +24,7 @@ jobs:
   test_job:
     steps:
       - name: Get Environment Data
-        uses: cloudify-cosmo/environment-data-action@v1.2
+        uses: cloudify-cosmo/environment-data-action@v1.3
         with:
           environment-name: "my-environment"
           outputs-file: env-data.json
